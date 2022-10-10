@@ -1,0 +1,94 @@
+{
+    "Grocery": [
+        {
+            "SLNO": 1,
+            "Name": "Sugar",
+            "Quantity": "1KG",
+            "Unit": 1,
+            "Departments": "Grocery",
+            "Notes": "Gud product",
+            "img": "sugar.jpg"
+        },
+        {
+            "SLNO": 2,
+            "Name": "Rice",
+            "Quantity": "5KG",
+            "Unit": 2,
+            "Departments": "Grocery",
+            "Notes": "Gud product",
+            "img": "Rice.jpg"
+        },
+        {
+            "SLNO": 3,
+            "Name": "Tomato",
+            "Quantity": "500KG",
+            "Unit": 5,
+            "Departments": "Vegetable",
+            "Notes": "Gud product",
+            "img": "tomato.jpg"
+        },
+        {
+            "SLNO": 4,
+            "Name": "Tea Powder",
+            "Quantity": "3KG",
+            "Unit": 4,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "Tea.jpg"
+        },
+        {
+            "SLNO": 5,
+            "Name": "Chilli Powder",
+            "Quantity": "4KG",
+            "Unit": 5,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "chilli.jpg"
+        },
+        {
+            "SLNO": 6,
+            "Name": "Salt",
+            "Quantity": "2KG",
+            "Unit": 4,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "salt.jpg"
+        },
+        {
+            "SLNO": 7,
+            "Name": "Rava",
+            "Quantity": "1KG",
+            "Unit": 2,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "rava.jpg"
+        },
+        {
+            "SLNO": 8,
+            "Name": "Oil",
+            "Quantity": "1Lit",
+            "Unit": 1,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "oil.jpg"
+        },
+        {
+            "SLNO": 9,
+            "Name": "Coconut Oil",
+            "Quantity": "2Lit",
+            "Unit": 1,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "coconut.jpg"
+        },
+        {
+            "SLNO": 10,
+            "Name": "Coriander Powder",
+            "Quantity": "1KG",
+            "Unit": 1,
+            "Departments": "Production",
+            "Notes": "Gud product",
+            "img": "Cori.jpg"
+        }
+    ]
+}

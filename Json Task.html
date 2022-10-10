@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROCERY LIST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        h4 {
+            background-color: rgb(48, 177, 132);
+            color: darkred;
+            font-size: 20px;
+            height: 60px;
+            text-align: center;
+            padding-top: 10px;
+
+    
+
+        }
+
+        body {
+            background-color: rgb(216, 216, 190);
+        }
+
+        #done {
+            height: 40px;
+            width: 100%;
+            background-color: darkgray;
+            margin-top: -27px;
+        }
+
+        button {
+            background-color: black;
+            color: aliceblue;
+            font-size: medium;
+        }
+
+        #demo {
+            color: rgb(0, 0, 0);
+            background-color: rgb(193, 208, 208);
+        }
+        th{
+            text-align: center;
+            background-color: rgb(193, 208, 208);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h4>GROCERY LIST</h4>
+    <div id="done"></div>
+    <button onclick="myfunction()">Generate List</button>
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>SL.NO</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Departments</th>
+                <th>Notes</th>
+                <th>Images</th>
+            </tr>
+        </thead>
+        <tbody id="demo">
+
+        </tbody>
+    </table>
+
+    <!-- <div class="container" id="demo">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2"></div> 
+                <div class="col-sm-1"></div> 
+                <div class="col-sm-2"></div> 
+                <div class="col-sm-2"></div> 
+                <div class="col-sm-2"></div> 
+            </div>
+        </div> -->
+    <script>
+        function myfunction() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // document.getElementById("demo").innerHTML=this.responseText;
+                    var res = JSON.parse(this.responseText)
+                    // console.log(res)
+                    var a = res.Grocery
+                    // console.log(a)
+                    // console.log(a[0].SLNO)
+                    // console.log(a.length)
+                    var out = ""
+                    for (var i = 0; i < a.length; i++) {
+                        out += "<tr><td>" + a[i].SLNO + "</td><td>" + a[i].Name + "</td><td>" + a[i].Quantity + "</td><td>" + a[i].Unit + "</td><td>"+ a[i].Departments+ "</td><td>" + a[i].Notes + "</td><td><img height='30px' width='70px' src=" + a[i].img + "></td></tr>"
+                    }
+                    document.getElementById("demo").innerHTML = out
+                }
+            }
+            xhttp.open("GET", "Task.json", true)
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>
